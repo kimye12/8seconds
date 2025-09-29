@@ -1,0 +1,162 @@
+#products-box {
+  width: 1440px;
+  margin: 0 auto;
+  padding-bottom: 120px;
+}
+
+.current-page {
+  width: 1400px;
+  height: 40px;
+  margin: 0 auto;
+  position: relative;
+  ol {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+  }
+  li {
+    margin-right: 8px;
+    a {
+      padding-right: 20px;
+      color: #b0b0b0;
+      font-size: 1.3rem;
+      background: url(../../assets/chevron-right-12.svg) no-repeat right center/
+        12px auto;
+    }
+  }
+
+  li:last-of-type {
+    a {
+      color: #111;
+      background: none;
+    }
+  }
+}
+
+.list-wrap {
+  width: 1400px;
+  margin: 0 auto;
+  padding-top: 40px;
+
+  h1 {
+    font-size: 41px;
+    padding-bottom: 17px;
+    color: #111;
+    border-bottom: 2px solid #111;
+    span {
+      font-size: 16px;
+    }
+  }
+}
+.sub-category {
+  padding: 13px 0 10px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+  ul {
+    display: flex;
+
+    li {
+      padding: 5px 20px 5px 0;
+
+      a {
+        font-size: 1.7rem;
+        color: #767676;
+        font-weight: 400;
+
+        &.active {
+          color: #111;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.products-container {
+}
+.products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+
+  article {
+    width: 220px;
+    height: 421px;
+  }
+}
+
+.product-img-box {
+  position: relative;
+  width: 100%;
+  height: 293px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.product-img-box:hover .hover {
+  opacity: 1;
+}
+
+.product-info {
+  padding: 10px 40px 0 0;
+  .name {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #111;
+    font-weight: 400;
+  }
+  .price {
+    margin-top: 6px;
+    font-weight: 700;
+    color: #111;
+    font-size: 1.5rem;
+  }
+  .add-btn {
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/empty.png) no-repeat center/cover;
+
+    &.active {
+      background: url(../../assets/heart.png) no-repeat center/cover;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 30px;
+  button {
+    width: 30px;
+    height: 22px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #111;
+    border: none;
+    background: none;
+
+    &.active {
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,164 @@
+#click-ranking {
+  width: 100%;
+  margin-top: 120px;
+  overflow: hidden;
+}
+
+.click-center {
+  text-align: center;
+  h2 {
+    font-size: 3.2rem;
+    margin-bottom: 30px;
+    color: #111;
+    font-weight: 700;
+  }
+}
+
+.click-tab-area {
+  margin-bottom: 33px;
+}
+
+.click-tab-nav {
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-weight: 700;
+
+    li {
+      a {
+        font-size: 2rem;
+        color: #c9c9c9;
+      }
+    }
+  }
+}
+
+.click-tab-nav > ul li[aria-selected="true"] a {
+  color: #111;
+  text-decoration: underline;
+}
+
+.click-items-wrap {
+  width: 100%;
+}
+
+.click-items-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.click-item {
+  flex-shrink: 0;
+  width: 338px;
+  text-align: left;
+  .num {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111;
+    line-height: 2.1rem;
+  }
+}
+
+.click-item-img-wrap {
+  width: 100%;
+  position: relative;
+  .hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.click-item-img-wrap > img {
+  width: 100%;
+}
+
+.click-item-img-wrap:hover .hover {
+  opacity: 1;
+}
+
+.click-item-info {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 80px 0 0;
+  position: relative;
+
+  .brand {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: #111;
+  }
+
+  .name {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 400;
+    color: #111;
+  }
+
+  .price {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    font-weight: 700;
+    color: #111;
+  }
+
+  .price-cut {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    font-weight: 500;
+    color: #969696;
+    text-decoration: line-through;
+  }
+
+  .sale {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+    font-weight: 700;
+    color: #7e00ff;
+    margin-right: 2px;
+  }
+
+  .sale-price {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+    font-weight: 700;
+    color: #111;
+  }
+
+  .add-btn {
+    position: absolute;
+    right: -70px;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    background: url("../../../assets/empty.png") no-repeat center/cover;
+
+    &.active {
+      background: url("../../../assets/heart.png") no-repeat center/cover;
+    }
+  }
+}
+
+.ranking_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 44px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  margin: 40px auto 0;
+  font-size: 1.4rem;
+}
