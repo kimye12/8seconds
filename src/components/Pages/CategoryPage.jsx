@@ -9,7 +9,7 @@ export default function CategoryPage({ code }) {
     isError,
   } = useQuery({
     queryKey: ["pageInfo", code],
-    queryFn: () => fetchPageCode({ code: code }),
+    queryFn: () => fetchPageCode({ code }),
   });
 
   if (isPending) {
