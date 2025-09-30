@@ -1,8 +1,21 @@
+import { useEffect, useState } from "react";
 import CategoryPage from "./CategoryPage";
 
 export default function CategoryWrapper() {
-  const hash = window.location.hash;
-  const code = hash.replace(/^#\/?/, "");
+  const [hashcode, setHashCode] = useState(
+    window.location.hash.replace(/^#\/?/, "")
+  );
 
-  return <CategoryPage key={Date.now()} code={code} />;
+  useEffect(() => {
+    const handleHashChange = () => {
+      setHashCode(window.location.hash.replace(/^#\/?/, ""));
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  });
+  return <CategoryPage code={hashcode} />;
 }
