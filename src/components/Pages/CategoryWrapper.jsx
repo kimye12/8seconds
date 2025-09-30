@@ -1,21 +1,9 @@
-import { useEffect, useState } from "react";
 import CategoryPage from "./CategoryPage";
+import { useLocation } from "react-router-dom";
 
 export default function CategoryWrapper() {
-  const [hashcode, setHashCode] = useState(
-    window.location.hash.replace(/^#\/?/, "")
-  );
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      setHashCode(window.location.hash.replace(/^#\/?/, ""));
-    };
-
-    window.addEventListener("hashchange", handleHashChange);
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  });
-  return <CategoryPage key={Date.now()} code={hashcode} />;
+  const location = useLocation();
+  const code = location.pathname.slice(1); // '/' 제거
+  console.log(code);
+  return <CategoryPage key={code} code={code} />;
 }
