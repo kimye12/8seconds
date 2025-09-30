@@ -17,5 +17,5 @@ export default function CategoryWrapper() {
       window.removeEventListener("hashchange", handleHashChange);
     };
   });
-  return <CategoryPage code={hashcode} />;
+  return <CategoryPage key={Date.now()} code={hashcode} />;
 }
