@@ -11,7 +11,7 @@ export default function CategoryPage({ code }) {
     queryKey: ["pageInfo", code],
     queryFn: () => fetchPageCode({ code }),
     enabled: !!code,
-    keepPreviousData: false
+
   });
 
   if (isPending) {
