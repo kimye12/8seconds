@@ -4,5 +4,5 @@ export default function CategoryWrapper() {
   const hash = window.location.hash;
   const code = hash.replace(/^#\/?/, "");
 
-  return <CategoryPage code={code} />;
+  return <CategoryPage key={Date.now()} code={code} />;
 }
