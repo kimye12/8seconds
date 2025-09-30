@@ -1,11 +1,8 @@
-import { useLocation, useParams } from "react-router-dom";
 import CategoryPage from "./CategoryPage";
 
 export default function CategoryWrapper() {
-  const location = useLocation();
-
-  console.log(location.pathname);
-  const code = location.pathname.slice(1);
+  const hash = window.location.hash;
+  const code = hash.replace(/^#\/?/, "");
 
   return <CategoryPage key={code} code={code} />;
 }

@@ -10,6 +10,7 @@ export default function CategoryPage({ code }) {
   } = useQuery({
     queryKey: ["pageInfo", code],
     queryFn: () => fetchPageCode({ code }),
+    enabled: !!code,
   });
 
   if (isPending) {
