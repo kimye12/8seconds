@@ -1,12 +1,11 @@
-# React + Vite
+8seconds 클론 코딩입니다.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+디자인적인 부분은 원본사이트에서 가져왔고 일부분 자율적으로 수정했습니다.
 
-Currently, two official plugins are available:
+UI부분은 React,JS로 구현하고 사이트내 기능은 Redux로 구현했습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+상품정보(이름,가격,이미지)는 Supabase를 통해 관리하고 Cart기능의 유동적인 기능은 Firebase를 통해 관리했습니다.
 
-## Expanding the ESLint configuration
+React-query를 통해 데이터캐싱을 유연하게 처리했습니다.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+그 외 css는 각자 컴포넌트 폴더를 통해 css파일을 구분했습니다.
